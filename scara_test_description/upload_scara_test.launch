@@ -1,0 +1,3 @@
+<launch>
+  <param name="robot_description" textfile="$(find scara_test_description)/urdf/scara_robot_simple.urdf"/>
+</launch>
