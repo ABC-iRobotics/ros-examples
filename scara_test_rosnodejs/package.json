@@ -1,0 +1,14 @@
+{
+  "name": "scara_test_rosnodejs",
+  "version": "1.0.0",
+  "description": "simple rosnodejs application to feed a scara robot with random joint coordinates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rosnodejs": "^3.0.1"
+  }
+}
