@@ -26,7 +26,7 @@ Some ROS example to practice
 4. Create a new package for 'roscpp_test_package' in 'src' folder 'catkin_create_pkg roscpp_test_package std_msgs roscpp'
 5. Create a new package for 'rospy_test_package' in 'src' folder 'catkin_create_pkg rospy_test_package std_msgs rospy'
 6. Create a new package for 'scara_test_description' in 'src' folder 'catkin_create_pkg scara_test_description'
-6. Create a new package for 'simple_start_package' in 'src' folder 'catkin_create_pkg simple_start_package'
+7. Create a new package for 'simple_start_package' in 'src' folder 'catkin_create_pkg simple_start_package'
 
 ## Installation
 - Clone the repository
@@ -36,7 +36,9 @@ Some ROS example to practice
 - Copy the 'upload_scara_test.launch' file from 'scara_test_description' folder to the 'scara_test_description' package 'launch' folder
 - Copy the 'scara_robot_simple.urdf' file from 'scara_test_description' folder to the 'scara_test_description' package 'urdf' folder
 - Create a 'launch' folder in the 'simple_start_package' package folder
-- Copy the 'start.launch' file from 'simple_start_package' folder to the 'simple_start_package' package 'launch' folder
+- Copy the 'start.launch' file from the 'simple_start_package' folder to the 'simple_start_package' package 'launch' folder
+- Copy the 'urdf.html' file from the 'simple_rosbrigde_test' folder to the 'apache2' root folder (default path: '/var/www/html/')
+- Run 'npm i' in the 'scara_test_rosnodejs' folder
 
 ## Example Usage 1
 1. Run in 1st terminal: 'roscore'
@@ -50,10 +52,10 @@ Some ROS example to practice
 2. Run in 2nd terminal: 'rosrun robot_state_publisher robot_state_publisher'
 3. Run in 3rd ternimal: 'rosparam set use_gui true'
 4. Run in 3rd terminal: 'rosrun joint_state_publisher joint_state_publisher'
-    OR
-4. Run in 3th terminal: 'nodejs ~/nodejs_ws/scara_test_rosnodejs/index.js'
+- OR
+4. Run in 3th terminal: 'nodejs "CLONED-REPO-PATH"/scara_test_rosnodejs/index.js'
 5. Run in 4th terminal: 'rosrun rviz rviz' and Add 'RobotModel' and Set the Fixed Frame to 'world'
-    Optional:
+- Optional:
 6. Run in 5th terminal: 'rosrun tf2_web_republisher tf2_web_republisher'
 7. Run in 6th terminal: 'roslaunch rosbridge_server rosbridge_websocket.launch' and open a Browser and open the http://localhost/urdf.html
 
@@ -63,4 +65,4 @@ We acknowledge the financial support of this work by the Hungarian State and the
 ## Bugs, feature requests, etc
 Please use the [GitHub issue tracker][].
 
-[GitHub issue tracker]: https://github.com/ABC-iRobotics/fanuc-webcontrol/issues
+[GitHub issue tracker]: https://github.com/ABC-iRobotics/ros-kinetic-examples/issues
