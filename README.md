@@ -16,6 +16,7 @@ Some ROS example to practice
 - ros-kinetic-desktop-full
 - ros-kinetic-tf2-web-republisher
 - ros-kinetic-rosbridge-suite
+- ros-kinetic-joint-state-publisher-gui
 - Node.js 10.x
 - apache2
 
@@ -38,7 +39,8 @@ Some ROS example to practice
 - Create a 'launch' folder in the 'simple_start_package' package folder
 - Copy the 'start.launch' file from the 'simple_start_package' folder to the 'simple_start_package' package 'launch' folder
 - Copy the 'urdf.html' file from the 'simple_rosbrigde_test' folder to the 'apache2' root folder (default path: '/var/www/html/')
-- Run 'npm i' in the 'scara_test_rosnodejs' folder
+- Run 'catkin_make' command in '~/catkin_ws' folder
+- Run 'npm i' command in the 'scara_test_rosnodejs' folder
 
 ## Example Usage 1
 1. Run in 1st terminal: 'roscore'
