@@ -1,7 +1,7 @@
-# ros-kinetic-examples
+# ros-examples
 
 ## Overview
-Some ROS example to practice
+Some ROS examples to practice
 
 ## TOC
 1. [Requirements](#requirements)
@@ -12,13 +12,18 @@ Some ROS example to practice
 6. [Bugs, feature requests, etc](#bugs-feature-requests-etc)
 
 ## Requirements
-- ROS Kinetic Desktop Full installation on Ubuntu 16.04
-- ros-kinetic-desktop-full
-- ros-kinetic-tf2-web-republisher
-- ros-kinetic-rosbridge-suite
-- ros-kinetic-joint-state-publisher-gui
-- Node.js 10.x
+- ROS Kinetic or Melodic Desktop Full installation on Ubuntu
+- tf2-web-republisher
+- rosbridge-suite
+- joint-state-publisher-gui
+- Node.js
 - apache2
+
+### Optional
+- openssh-server
+- mc
+- node-red
+- terminator
 
 ## Configuration
 1. Create catkin workspace 'mkdir -p ~/catkin_ws/src'
