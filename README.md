@@ -148,13 +148,15 @@ Some ROS examples to practice
 - cp ~/Templates/roscpp_test_service/* ~/catkin_ws/src/roscpp_test_service/src/
 - cd ~/catkin_ws/src/roscpp_test_service
 - open 'nano CMakeLists.txt' add these rows to the end of the file and save the file with CTRL+O ENTER and exit with CTRL+X:
-		add_executable(simple_roscpp_server src/simple_roscpp_server.cpp)
-		target_link_libraries(simple_roscpp_server ${catkin_LIBRARIES})
-		add_dependencies(simple_roscpp_server roscpp_test_service_generate_messages_cpp)
-		add_executable(simple_roscpp_client src/simple_roscpp_client.cpp)
-		target_link_libraries(simple_roscpp_client ${catkin_LIBRARIES})
-		add_dependencies(simple_roscpp_client roscpp_test_service_generate_messages_cpp)
-		
+	```
+	add_executable(simple_roscpp_server src/simple_roscpp_server.cpp)
+	target_link_libraries(simple_roscpp_server ${catkin_LIBRARIES})
+	add_dependencies(simple_roscpp_server roscpp_test_service_generate_messages_cpp)
+	add_executable(simple_roscpp_client src/simple_roscpp_client.cpp)
+	target_link_libraries(simple_roscpp_client ${catkin_LIBRARIES})
+	add_dependencies(simple_roscpp_client roscpp_test_service_generate_messages_cpp)
+	```
+
 - cd ~/catkin_ws
 - catkin_make
 - rospack profile
