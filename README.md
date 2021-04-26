@@ -35,12 +35,12 @@ Some ROS examples to practice
 1. Create a new package for 'roscpp_test_package' in 'src' folder 'catkin_create_pkg roscpp_test_package std_msgs roscpp'
 2. Copy the 'simple_roscpp_publisher.cpp' and the 'simple_roscpp_subscriber.cpp' files from the 'roscpp_test_package' folder to the 'roscpp_test_package' package 'src' folder
 3. Add these rows to the end of the 'roscpp_test_package/CMakeLists.txt' file
-		add_executable(simple_roscpp_publisher src/simple_roscpp_publisher.cpp)
-		target_link_libraries(simple_roscpp_publisher ${catkin_LIBRARIES})
-		add_dependencies(simple_roscpp_publisher roscpp_test_package_generate_messages_cpp)
-		add_executable(simple_roscpp_subscriber src/simple_roscpp_subscriber.cpp)
-		target_link_libraries(simple_roscpp_subscriber ${catkin_LIBRARIES})
-		add_dependencies(simple_roscpp_subscriber roscpp_test_package_generate_messages_cpp)
+			add_executable(simple_roscpp_publisher src/simple_roscpp_publisher.cpp)
+			target_link_libraries(simple_roscpp_publisher ${catkin_LIBRARIES})
+			add_dependencies(simple_roscpp_publisher roscpp_test_package_generate_messages_cpp)
+			add_executable(simple_roscpp_subscriber src/simple_roscpp_subscriber.cpp)
+			target_link_libraries(simple_roscpp_subscriber ${catkin_LIBRARIES})
+			add_dependencies(simple_roscpp_subscriber roscpp_test_package_generate_messages_cpp)
 
 ### Build the roscpp package
 - cd ~/catkin_ws
