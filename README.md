@@ -35,12 +35,14 @@ Some ROS examples to practice
 1. Create a new package for 'roscpp_test_package' in 'src' folder 'catkin_create_pkg roscpp_test_package std_msgs roscpp'
 2. Copy the 'simple_roscpp_publisher.cpp' and the 'simple_roscpp_subscriber.cpp' files from the 'roscpp_test_package' folder to the 'roscpp_test_package' package 'src' folder
 3. Add these rows to the end of the 'roscpp_test_package/CMakeLists.txt' file
-			add_executable(simple_roscpp_publisher src/simple_roscpp_publisher.cpp)
-			target_link_libraries(simple_roscpp_publisher ${catkin_LIBRARIES})
-			add_dependencies(simple_roscpp_publisher roscpp_test_package_generate_messages_cpp)
-			add_executable(simple_roscpp_subscriber src/simple_roscpp_subscriber.cpp)
-			target_link_libraries(simple_roscpp_subscriber ${catkin_LIBRARIES})
-			add_dependencies(simple_roscpp_subscriber roscpp_test_package_generate_messages_cpp)
+	```
+	add_executable(simple_roscpp_publisher src/simple_roscpp_publisher.cpp)
+	target_link_libraries(simple_roscpp_publisher ${catkin_LIBRARIES})
+	add_dependencies(simple_roscpp_publisher roscpp_test_package_generate_messages_cpp)
+	add_executable(simple_roscpp_subscriber src/simple_roscpp_subscriber.cpp)
+	target_link_libraries(simple_roscpp_subscriber ${catkin_LIBRARIES})
+	add_dependencies(simple_roscpp_subscriber roscpp_test_package_generate_messages_cpp)
+	```
 
 ### Build the roscpp package
 - cd ~/catkin_ws
@@ -100,41 +102,49 @@ Some ROS examples to practice
 - cd msg
 - echo "int64 num" > Num.msg
 - open 'nano ~/catkin_ws/src/roscpp_test_service/package.xml' and uncomment these rows and save the file with CTRL+O ENTER and exit with CTRL+X:
-		<build_depend>message_generation</build_depend>
-		<exec_depend>message_runtime</exec_depend>
+	```
+	<build_depend>message_generation</build_depend>
+	<exec_depend>message_runtime</exec_depend>
+	```
 - open 'nano ~/catkin_ws/src/roscpp_test_service/CMakeLists.txt' and uncomment or/and add these rows and save the file with CTRL+O ENTER and exit with CTRL+X:
-		find_package(catkin REQUIRED COMPONENTS
-		   ...
-		   message_generation
-		)
-		catkin_package(
-		  ...
-		  CATKIN_DEPENDS message_runtime
-		)
-		add_message_files(
-		  FILES
-		  Num.msg
-		)		
-		generate_messages(
-		  DEPENDENCIES
-		  std_msgs
-		)
+	```
+	find_package(catkin REQUIRED COMPONENTS
+	  ...
+	  message_generation
+	)
+	catkin_package(
+	  ...
+	  CATKIN_DEPENDS message_runtime
+	)
+	add_message_files(
+	  FILES
+	  Num.msg
+	)		
+	generate_messages(
+	  DEPENDENCIES
+	  std_msgs
+	)
+	```
 
 - cd ~/catkin_ws/src/roscpp_test_service
 - mkdir srv
 - cd srv
 - open 'nano AddTwoInts.srv' add these rows to the file and save the file with CTRL+O ENTER and exit with CTRL+X:
-		int64 a
-		int64 b
-		---
-		int64 sum
+	```
+	int64 a
+	int64 b
+	---
+	int64 sum
+	```
 
 - open 'nano ~/catkin_ws/src/roscpp_test_service/CMakeLists.txt' and uncomment or/and add these rows and save the file with CTRL+O ENTER and exit with CTRL+X:
-		add_service_files(
-		  FILES
-		  AddTwoInts.srv
-		)
-	
+	```
+	add_service_files(
+	  FILES
+	  AddTwoInts.srv
+	)
+	```
+
 - cp ~/Templates/roscpp_test_service/* ~/catkin_ws/src/roscpp_test_service/src/
 - cd ~/catkin_ws/src/roscpp_test_service
 - open 'nano CMakeLists.txt' add these rows to the end of the file and save the file with CTRL+O ENTER and exit with CTRL+X:
