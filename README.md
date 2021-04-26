@@ -37,6 +37,7 @@ Some ROS examples to practice
 ## Installation
 - Clone the repository
 - Copy the 'simple_roscpp_publisher.cpp' and the 'simple_roscpp_subscriber.cpp' files from the 'roscpp_test_package' folder to the 'roscpp_test_package' package 'src' folder
+- Add [these rows](roscpp_CMakeLists.md) to the end of the 'roscpp_test_package/CMakeLists.txt' file
 - Copy the 'simple_rospy_publisher.py' and the 'simple_rospy_subscriber.py' files from the 'simple_rospy_package' folder to the 'rospy_test_package' package 'src' folder
 - Create a 'launch' and a 'urdf' folder in the 'scara_test_description' package folder
 - Copy the 'upload_scara_test.launch' file from 'scara_test_description' folder to the 'scara_test_description' package 'launch' folder
