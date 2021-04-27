@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "rosnodejs": "^3.0.1"
+    "rosnodejs": "^3.0.2"
   }
 }
