@@ -76,9 +76,9 @@ Some ROS examples to practice
 - Create a new package for 'simple_start_package' in 'src' folder 'catkin_create_pkg simple_start_package'
 - Create a 'launch' folder in the 'simple_start_package' package folder
 - Copy the 'start.launch' file from the 'simple_start_package' folder to the 'simple_start_package' package 'launch' folder
-- Copy the 'urdf.html' file from the 'simple_rosbrigde_test' folder to the 'apache2' root folder (default path: '/var/www/html/')
 - Run 'catkin_make' command in '~/catkin_ws' folder
 - Run 'npm i' command in the 'scara_test_rosnodejs' folder
+- Copy the 'urdf.html' file from the 'simple_rosbrigde_test' folder to the 'apache2' root folder (default path: '/var/www/html/')
 
 ### Usage
 1. Run in 1nd terminal: 'roslaunch scara_test_description upload_scara_test.launch'
