@@ -89,10 +89,9 @@ Some ROS examples to practice
 - Run the 'catkin_make' command
 - rospack profile
 
-### ROS nodejs
+### ROS nodejs and ROS brigde setup
 - Run the 'npm i' command in the 'scara_test_rosnodejs' folder
 - Copy the 'urdf.html' file from the 'simple_rosbrigde_test' folder to the 'apache2' root folder (default path: '/var/www/html/')
-- Run the 'nodejs index.js' command in the 'scara_test_rosnodejs' folder
 
 ### Usage
 1. Run in 1nd terminal: 'roslaunch scara_test_description upload_scara_test.launch'
@@ -100,7 +99,7 @@ Some ROS examples to practice
 3. Run in 3rd ternimal: 'rosparam set use_gui true'
 4. Run in 3rd terminal: 'rosrun joint_state_publisher joint_state_publisher'
 - OR
-4. Run in 3th terminal: 'nodejs "CLONED-REPO-PATH"/scara_test_rosnodejs/index.js'
+4. Run in 3th terminal: 'nodejs index.js' in the scara_test_rosnodejs folder
 5. Run in 4th terminal: 'rosrun rviz rviz' and Add 'RobotModel' and Set the Fixed Frame to 'world'
 - Optional:
 6. Run in 5th terminal: 'rosrun tf2_web_republisher tf2_web_republisher'
