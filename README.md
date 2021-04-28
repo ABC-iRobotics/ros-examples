@@ -46,7 +46,7 @@ Some ROS examples to practice
 
 ### Build the roscpp package
 - cd ~/catkin_ws
-- run the 'catkin_make' command 2 times
+- Run the 'catkin_make' command 2 times
 - rospack profile
 
 ### Run the roscpp nodes
@@ -60,7 +60,7 @@ Some ROS examples to practice
 
 ### Build the rospy package
 - cd ~/catkin_ws
-- run the 'catkin_make' command
+- Run the 'catkin_make' command
 - rospack profile
 
 ### Run the rospy nodes
@@ -74,13 +74,25 @@ Some ROS examples to practice
 - Copy the 'upload_scara_test.launch' file from 'scara_test_description' folder to the 'scara_test_description' package 'launch' folder
 - Copy the 'scara_robot_simple.urdf' file from 'scara_test_description' folder to the 'scara_test_description' package 'urdf' folder
 
+### Build the scara robot package
+- cd ~/catkin_ws
+- Run the 'catkin_make' command
+- rospack profile
+
 ## Create a launch package
 - Create a new package for 'simple_start_package' in 'src' folder 'catkin_create_pkg simple_start_package'
 - Create a 'launch' folder in the 'simple_start_package' package folder
 - Copy the 'start.launch' file from the 'simple_start_package' folder to the 'simple_start_package' package 'launch' folder
-- Run 'catkin_make' command in '~/catkin_ws' folder
-- Run 'npm i' command in the 'scara_test_rosnodejs' folder
+
+### Build the launch package
+- cd ~/catkin_ws
+- Run the 'catkin_make' command
+- rospack profile
+
+### ROS nodejs
+- Run the 'npm i' command in the 'scara_test_rosnodejs' folder
 - Copy the 'urdf.html' file from the 'simple_rosbrigde_test' folder to the 'apache2' root folder (default path: '/var/www/html/')
+- Run the 'nodejs index.js' command in the 'scara_test_rosnodejs' folder
 
 ### Usage
 1. Run in 1nd terminal: 'roslaunch scara_test_description upload_scara_test.launch'
