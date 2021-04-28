@@ -59,6 +59,7 @@ Some ROS examples to practice
 
 ### Build the rospy package
 - cd ~/catkin_ws
+- run the 'catkin_make' command 2 times
 - rospack profile
 
 ### Run the rospy nodes
