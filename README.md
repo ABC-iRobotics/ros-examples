@@ -12,7 +12,7 @@ Some ROS examples to practice
 6. [Bugs, feature requests, etc](#bugs-feature-requests-etc)
 
 ## Requirements
-- ROS Kinetic or Melodic Desktop Full installation on Ubuntu
+- ROS Desktop Full installation on Ubuntu (tested with Kinetic, Melodic and Noetic)
 - tf2-web-republisher
 - rosbridge-suite
 - joint-state-publisher-gui
@@ -158,7 +158,7 @@ Some ROS examples to practice
 	)
 	```
 
-- cp ~/Templates/roscpp_test_service/* ~/catkin_ws/src/roscpp_test_service/src/
+- cp REPOSITORY_FOLDER/roscpp_test_service/* ~/catkin_ws/src/roscpp_test_service/src/
 - cd ~/catkin_ws/src/roscpp_test_service
 - open 'nano CMakeLists.txt' add these rows to the end of the file and save the file with CTRL+O ENTER and exit with CTRL+X:
 	```
