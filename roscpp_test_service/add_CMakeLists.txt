@@ -1,0 +1,23 @@
+find_package(catkin REQUIRED COMPONENTS
+  ...
+  message_generation
+)
+catkin_package(
+  ...
+  CATKIN_DEPENDS message_runtime
+)
+add_service_files(
+  FILES
+  AddTwoInts.srv
+)		
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
+
+add_executable(simple_roscpp_server src/simple_roscpp_server.cpp)
+target_link_libraries(simple_roscpp_server ${catkin_LIBRARIES})
+add_dependencies(simple_roscpp_server roscpp_test_service_generate_messages_cpp)
+add_executable(simple_roscpp_client src/simple_roscpp_client.cpp)
+target_link_libraries(simple_roscpp_client ${catkin_LIBRARIES})
+add_dependencies(simple_roscpp_client roscpp_test_service_generate_messages_cpp)
