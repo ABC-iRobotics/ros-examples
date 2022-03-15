@@ -175,6 +175,21 @@ Some ROS examples to practice
 - 'cd ~/catkin_ws'
 - 'catkin_make'
 - 'rospack profile'
+- Run the 'npm i' command in the 'ros-examples/scara_test_rosnodejs' folder
+- Copy the 'urdf.html' file from the 'ros-examples/simple_rosbrigde_test' folder to the 'apache2' root folder (default path: '/var/www/html/')
+
+### Usage:
+1. Run in 1nd terminal: 'roslaunch scara_test_description upload_scara_test.launch'
+2. Run in 2nd terminal: 'rosrun robot_state_publisher robot_state_publisher'
+3. Run in 3rd ternimal: 'rosrun joint-state-publisher-gui joint-state-publisher-gui'
+4. Run in 3rd terminal: 'rosrun joint_state_publisher joint_state_publisher'
+- OR
+4. Run in 3th terminal: 'nodejs index.js' in the scara_test_rosnodejs folder
+5. Run in 4th terminal: 'rosrun rviz rviz' and Add 'RobotModel' and Set the Fixed Frame to 'world'
+- Optional:
+6. Run in 5th terminal: 'rosrun tf2_web_republisher tf2_web_republisher'
+7. Run in 6th terminal: 'roslaunch rosbridge_server rosbridge_websocket.launch' and open a Browser and open the http://localhost/urdf.html
+
 
 ## Create a launch package
 - Create a new package for 'simple_start_package' in the '~/catkin_ws/src/' folder: 'catkin_create_pkg simple_start_package'
@@ -186,18 +201,16 @@ Some ROS examples to practice
 - 'catkin_make'
 - 'rospack profile'
 
-### ROS nodejs and ROS brigde setup
-- Run the 'npm i' command in the 'scara_test_rosnodejs' folder
-- Copy the 'urdf.html' file from the 'ros-examples/simple_rosbrigde_test' folder to the 'apache2' root folder (default path: '/var/www/html/')
+### Usage
+- 'roslaunch simple_start_package start.launch'
+
+## Create an actionlib client with roslibjs
+- Copy the 'fibonacci.html' file from the 'ros-examples/simple_rosbrigde_test' folder to the 'apache2' root folder (default path: '/var/www/html/')
 
 ### Usage
-1. Run in 1nd terminal: 'roslaunch scara_test_description upload_scara_test.launch'
-2. Run in 2nd terminal: 'rosrun robot_state_publisher robot_state_publisher'
-3. Run in 3rd ternimal: 'rosparam set use_gui true'
-4. Run in 3rd terminal: 'rosrun joint_state_publisher joint_state_publisher'
-- OR
-4. Run in 3th terminal: 'nodejs index.js' in the scara_test_rosnodejs folder
-5. Run in 4th terminal: 'rosrun rviz rviz' and Add 'RobotModel' and Set the Fixed Frame to 'world'
-- Optional:
-6. Run in 5th terminal: 'rosrun tf2_web_republisher tf2_web_republisher'
-7. Run in 6th terminal: 'roslaunch rosbridge_server rosbridge_websocket.launch' and open a Browser and open the http://localhost/urdf.html
+- 'roscore'
+- 'rosrun actionlib_tutorials fibonacci_server'
+- 'roslaunch rosbridge_server rosbridge_websocket.launch'
+- Open a Browser and go to the http://localhost/fibonacci.html page and press F12 to show the Browser console.
+
+
