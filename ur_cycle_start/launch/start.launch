@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find ur_description)/launch/load_ur5.launch"/>
+  <param name="use_sim_time" value="true" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+  <node pkg="rosbag" type="play" name="ur_cycle" output="screen" args="-l $(find ur_cycle_start)/bag/start.bag"/>
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+</launch>
