@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
+
 from __future__ import print_function
 
-from beginner_tutorials.srv import AddTwoInts,AddTwoIntsResponse
+from rospy_test_package.srv import AddTwoInts,AddTwoIntsResponse
 import rospy
 
 def handle_add_two_ints(req):
