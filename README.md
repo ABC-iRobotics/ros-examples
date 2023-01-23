@@ -108,7 +108,7 @@ Some ROS examples to practice
 - 'rosmsg list'
 - 'rosmsg info simple_test_message/Num'
 
-## Create a ROS service
+## Create a roscpp service
 
 - 'cd ~/catkin_ws/src'
 - 'catkin_create_pkg roscpp_test_service std_msgs roscpp'
@@ -164,6 +164,58 @@ Some ROS examples to practice
 1. Run in 1st terminal: 'roscore'
 2. Run in 2th terminal: 'rosrun roscpp_test_service simple_roscpp_server'
 3. Run in 3th terminal: 'rosrun roscpp_test_service simple_roscpp_client 103 34'
+
+## Create a rospy service
+
+- 'cd ~/catkin_ws/src'
+- 'catkin_create_pkg rospy_test_service std_msgs rospy'
+- 'cd ~/catkin_ws/src/rospy_test_service'
+- 'mkdir srv'
+- 'cd srv'
+- Open 'nano AddTwoInts.srv' and add these rows to the file and save the file with CTRL+O ENTER and exit with CTRL+X:
+	```
+	int64 a
+	int64 b
+	---
+	int64 sum
+	```
+
+- Open 'nano ~/catkin_ws/src/rospy_test_service/package.xml' and uncomment these rows and save the file with CTRL+O ENTER and exit with CTRL+X:
+	```
+	<build_depend>message_generation</build_depend>
+	<exec_depend>message_runtime</exec_depend>
+	```
+- Open 'nano ~/catkin_ws/src/rospy_test_service/CMakeLists.txt' and uncomment or/and add these rows and save the file with CTRL+O ENTER and exit with CTRL+X:
+	```
+	find_package(catkin REQUIRED COMPONENTS
+	  ...
+	  message_generation
+	)
+	add_service_files(
+	  FILES
+	  AddTwoInts.srv
+	)
+	generate_messages(
+	  DEPENDENCIES
+	  std_msgs
+	)
+	catkin_package(
+	  ...
+	  CATKIN_DEPENDS message_runtime ...
+	)	
+	catkin_install_python(PROGRAMS simple_rospy_server.py simple_rospy_client.py
+	  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+	)
+	```
+
+- 'cd ~/catkin_ws'
+- 'catkin_make'
+- 'rospack profile'
+
+### Usage:
+1. Run in 1st terminal: 'roscore'
+2. Run in 2th terminal: 'rosrun roscpp_test_service simple_rospy_server'
+3. Run in 3th terminal: 'rosrun roscpp_test_service simple_rospy_client 103 34'
 
 ## Create a scara robot package
 - Create a new package for 'scara_test_description' in the '~/catkin_ws/src/' folder: 'catkin_create_pkg scara_test_description'

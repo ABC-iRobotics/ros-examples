@@ -1,8 +1,10 @@
+#!/usr/bin/env python3
+
 from __future__ import print_function
 
 import sys
 import rospy
-from beginner_tutorials.srv import *
+from rospy_test_service.srv import *
 
 def add_two_ints_client(x, y):
     rospy.wait_for_service('add_two_ints')
